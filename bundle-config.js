@@ -1,0 +1,1 @@
+if (global.TNS_WEBPACK) { require("@nativescript/core/bundle-entry-points"); const context = require.context("~/", true, /(page|fragment)\.(xml|css|js|ts|scss|less|sass)$/); global.registerWebpackModules(context); }

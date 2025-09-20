@@ -1,3 +1,4 @@
-<GridLayout>
-  <page-router-outlet></page-router-outlet>
-</GridLayout>
+<RootLayout (loaded)="onAppComponentLoaded($event)">
+    <ns-app-banner></ns-app-banner>
+    <page-router-outlet></page-router-outlet>
+</RootLayout>

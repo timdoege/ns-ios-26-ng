@@ -1,0 +1,245 @@
+// Import app variables
+@import 'app-variables';
+
+// Import the core and default themes
+@import '~@nativescript/theme/core';
+
+// Import common styles
+@import 'app-common';
+
+// Place any CSS rules you want to apply only on Android here
+.grayout {
+    opacity: 0.6;
+}
+.switch-style  {
+    off-background-color: $ba-red;
+}
+/*
+TextField {
+    placeholder-color: $ba-bg;
+}
+*/
+.fa-icon {
+    @extend .fas;
+    font-size: 18;
+}
+
+.checkbox-icon-empty {
+    font-size: 30;
+    margin: 0;
+    text-align: left;
+    background-color: transparent;
+}
+
+ActionBar {
+    font-size: 6;
+}
+
+.input-icon {
+    // padding-top: 14;
+}
+
+.action-bar-icon {
+    width: 40;
+    height: 40;
+}
+
+.action-bar-icon-right {
+    width: 40;
+    height: 40;
+    margin: 0 20 0 0;
+}
+
+.action-bar-logo {
+    margin-top: 15;
+}
+
+.fas.nt-action-bar-item {
+    font-size: 16;
+}
+
+
+// Font icon class
+.fab {
+    font-family: 'fa-brands-400';
+    font-weight: 400;
+    font-style: normal;
+    color: $ba-blue;
+}
+/* 
+    File name: fa-regular-400.ttf 
+    Font name: Font Awesome 5 Free
+*/
+.far {
+    font-family: 'fa-regular-400';
+    font-weight: 400;
+    font-style: normal;
+    color: $ba-blue;
+}
+
+/* 
+    File name: fa-solid-900.ttf 
+    Font name: Font Awesome 5 Free
+*/
+.fas {
+    font-family: 'fa-solid-900';
+    font-weight: 900;
+    font-style: normal;
+    // color: $ba-blue;
+}
+
+// Material icons
+.m-icon {
+    font-family: 'MaterialIcons-Regular';
+    font-weight: 400;
+    // font-style: revert;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-outline {
+    font-family: 'MaterialIconsOutlined-Regular';
+    font-weight: 400;
+    // font-style: revert;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-bottom-navigation {
+    font-family: 'MaterialIconsOutlined-Regular';
+    font-weight: 400;
+    height: 40;
+    // font-style: revert;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-round {
+    font-family: 'MaterialIconsRound-Regular';
+    font-weight: 400;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-sharp {
+    font-family: 'MaterialIconsSharp-Regular';
+    font-weight: 400;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-two-tone {
+    font-family: 'MaterialIconsTwoTone-Regular';
+    font-weight: 400;
+    font-size: $ba-icon-size;
+}
+
+// BA
+/**
+│ Satoshi-Black.otf                 │ font-family: "Satoshi", "Satoshi-Black"; font-weight: 900;                                 │
+│ Satoshi-BlackItalic.otf           │ font-family: "Satoshi", "Satoshi-BlackItalic"; font-weight: 900;                           │
+│ Satoshi-Bold.otf                  │ font-family: "Satoshi", "Satoshi-Bold"; font-weight: 700;                                  │
+│ Satoshi-BoldItalic.otf            │ font-family: "Satoshi", "Satoshi-BoldItalic"; font-weight: 700;                            │
+│ Satoshi-Italic.otf                │ font-family: "Satoshi", "Satoshi-Italic"; font-weight: 400;                                │
+│ Satoshi-Light.otf                 │ font-family: "Satoshi", "Satoshi-Light"; font-weight: 300;                                 │
+│ Satoshi-LightItalic.otf           │ font-family: "Satoshi", "Satoshi-LightItalic"; font-weight: 300;                           │
+│ Satoshi-Medium.otf                │ font-family: "Satoshi", "Satoshi-Medium"; font-weight: 500;                                │
+│ Satoshi-MediumItalic.otf          │ font-family: "Satoshi", "Satoshi-MediumItalic"; font-weight: 500;                          │
+│ Satoshi-Regular.otf               │ font-family: "Satoshi", "Satoshi-Regular"; font-weight: 400;                               │
+│ Satoshi-Regular.ttf               │ font-family: "Satoshi", "Satoshi-Regular"; font-weight: 400; 
+*/
+
+.ba-font-base {
+    font-family: 'Satoshi-Medium';
+    font-weight: 500;
+}
+
+.ba-base {
+    @extend .ba-font-base;
+    font-weight: 500;
+}
+
+.ba-font {
+    @extend .ba-font-base;
+    color: $ba-blue;
+}
+
+.ba-font-white {
+    @extend .ba-font-base;
+    color: white;
+    font-size: $ba-font-size;
+}
+
+.ba-medium-base {
+    font-family: 'Satoshi-Medium';
+    font-weight: 500;
+}
+
+.ba-medium {
+    @extend .ba-medium-base;
+    color: $ba-blue;
+}
+
+.ba-light-base {
+    font-family: 'Satoshi-Light';
+    font-weight: 300;
+}
+
+.ba-light {
+    @extend .ba-light-base;
+    color: $ba-blue;
+}
+
+.ba-bold-base {
+    font-family: 'Satoshi-Bold';
+    font-weight: 700;
+}
+
+.ba-bold {
+    @extend .ba-bold-base;
+    color: $ba-blue;
+}
+
+.ba-header {
+    @extend .ba-font-base;
+    font-size: $ba-font-size-small;
+    color: $ba-blue;
+}
+
+.ba-header-medium {
+    @extend .ba-font-base;
+    font-size: $ba-font-size-smaller;
+    color: $ba-blue;
+}
+
+.ba-italic-base {
+    font-family: 'Satoshi-Bold';
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ba-italic {
+    @extend .ba-italic-base;
+    color: $ba-blue;
+}
+
+.ba-description {
+    @extend .ba-font-base;
+    font-weight: 500;
+    color: $ba-text-color-main;
+}
+
+.modal-menu-item {
+    @extend .ba-medium;
+    font-size: 18;
+}
+
+.scan-icon {
+    @extend .fas;
+    font-size: 28;
+}
+
+.modal-menu-item {
+    @extend .ba-medium;
+    font-size: 18;
+}
+
+PopupMenu {
+    font-size: 18;
+    color: $ba-blue;
+}

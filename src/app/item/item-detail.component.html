@@ -1,9 +1,57 @@
 <ActionBar title="Details"></ActionBar>
-
-<FlexboxLayout flexDirection="column">
-  <FlexboxLayout class="m-4">
-    <Label class="text-3xl text-gray-400" [text]="item()?.id + '. '"></Label>
-    <Label class="text-3xl" [text]="item()?.name"></Label>
-  </FlexboxLayout>
-  <Label class="text-xl m-4" [text]="item()?.role"></Label>
-</FlexboxLayout>
+<GridLayout rows="auto,auto,auto,*" height="100%">
+    <GridLayout rows="auto" columns="*,*" class="common-page-header">
+      <Label col="0" text="User name" class="m-l-10"></Label>
+      <Label col="1" text="&nbsp;" class="pull-right"></Label>
+    </GridLayout>
+    <SegmentedBar row="1" [items]="segBarItems" (selectedIndexChange)="onSelectedSegBarIndexChange($event)"
+      class="m-x-20 nt-segmented-bar" (loaded)="onSegBarLoaded($event)">
+    </SegmentedBar>
+    <ActivityIndicator row="2" [busy]="isBusy" [visibility]="!isBusy ? 'collapse' : 'visible'"></ActivityIndicator>
+    <StackLayout row="3" class="p-x-10">
+      <ng-container *ngIf="selectedSegmentIndex === 0">
+        <ng-container *ngIf="customerOrderReceipts && customerOrderReceipts.length > 0; then hasOrderReceipts; else hasNoOrderReceipts"></ng-container>
+        <ng-template #hasOrderReceipts>
+          <RadListView [items]="customerOrderReceipts" height="100%">
+            <ng-template tkListItemTemplate let-item="item">
+            <GridLayout rows="auto, auto, auto, auto" columns="auto, *, auto" (tap)="navigateToDetails(item)">
+                <Label row="0" col="0" class="ba-h3-black" text="{{ 'order-receipts.customer-number' | L }}"></Label>
+                <Label row="0" col="1" class="ba-h3-bold-black" [text]="item?.customerNumber"></Label>
+                <Label row="1" col="0" class="ba-h3-black" text="{{ 'order-receipts.order-number' | L }}"></Label>
+                <Label row="1" col="1" class="ba-h3-bold-black" [text]="item?.orderNumber"></Label>
+                <Label row="2" col="0" class="ba-h3-black" text="{{ 'order-receipts.order-reference' | L }}"></Label>
+                <Label row="2" col="1" class="ba-h3-bold-black" [text]="item?.orderReference"></Label>
+                <Label rowSpan="4" col="2" text="&#xf054;" class="fas pull-right"></Label>
+                <Label row="3" colSpan="3" class="hr-label"></Label>
+            </GridLayout>
+            </ng-template>
+          </RadListView>
+        </ng-template>
+        <ng-template #hasNoOrderReceipts>
+          <Label [visibility]="isBusy ? 'collapse' : 'visible'" class="ba-h3-bold-black" text="{{ 'order-receipts.date-detail-no-orders' | L }}"></Label>
+        </ng-template>        
+      </ng-container>
+      <ng-container *ngIf="selectedSegmentIndex === 1">
+        <ng-container *ngIf="customerReturnReceipts && customerReturnReceipts.length > 0; then hasReturnReceipts; else hasNoReturnReceipts"></ng-container>
+        <ng-template #hasReturnReceipts>
+          <RadListView [items]="customerReturnReceipts" height="100%">
+            <ng-template tkListItemTemplate let-item="item">
+            <GridLayout rows="auto, auto, auto, auto" columns="auto, *, auto" (tap)="navigateToDetails(item)">
+                <Label row="0" col="0" class="ba-h3-black" text="{{ 'order-receipts.customer-number' | L }}"></Label>
+                <Label row="0" col="1" class="ba-h3-bold-black" [text]="item?.customerNumber"></Label>
+                <Label row="1" col="0" class="ba-h3-black" text="{{ 'order-receipts.return-number' | L }}"></Label>
+                <Label row="1" col="1" class="ba-h3-bold-black" [text]="item?.orderNumber"></Label>
+                <Label row="2" col="0" class="ba-h3-black" text="{{ 'order-receipts.order-reference' | L }}"></Label>
+                <Label row="2" col="1" class="ba-h3-bold-black" [text]="item?.orderReference"></Label>
+                <Label rowSpan="4" col="2" text="&#xf054;" class="fas pull-right"></Label>
+                <Label row="3" colSpan="3" class="hr-label"></Label>
+            </GridLayout>
+            </ng-template>
+          </RadListView>
+        </ng-template>
+        <ng-template #hasNoReturnReceipts>
+          <Label [visibility]="isBusy ? 'collapse' : 'visible'" class="ba-h3-bold-black" text="{{ 'order-receipts.date-detail-no-returns' | L }}"></Label>
+        </ng-template>        
+      </ng-container>
+    </StackLayout>
+</GridLayout>

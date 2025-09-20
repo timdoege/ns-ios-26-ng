@@ -1,0 +1,764 @@
+// Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the vast majority of your CSS code goes.
+
+// Common page class
+.page__content {
+    &-icon,
+    &-placeholder {
+        color: const(grey);
+        font-size: 20;
+        vertical-align: center;
+        horizontal-align: center;
+    }
+
+    &-icon {
+        font-size: 72;
+        vertical-align: top;
+        margin-top: 20%;
+    }
+}
+
+.far-icon {
+    @extend .far;
+    font-size: 20;
+}
+
+// Common page class
+.page {
+    @extend .ba-font-base;
+    background-color: $ba-bg;
+    font-size: 17;
+    color: $ba-blue;
+    padding: 10 10 10 10;
+}
+.page-content {
+    .page-placeholder {
+        color: $page-icon-color;
+        font-size: $page-content-placeholder-font-size;
+        vertical-align: center;
+        horizontal-align: center;
+    }
+
+    .page-icon {
+        font-size: 72;
+        vertical-align: top;
+        horizontal-align: center;
+        color: $page-icon-color;
+        margin-top: 20%;
+    }
+}
+
+.modal {
+    @extend .ba-medium;
+    margin: 20;
+    border-radius: 25;
+    horizontal-align: center;
+    vertical-align: middle;
+    background-color: $ba-white;
+}
+
+.modal-container {
+    @extend .ba-font-base;
+    padding: 25;
+    padding-bottom: 10;
+}
+
+//Action bar
+.nt-action-bar {
+    @extend .ba-font-base;
+    background-color: $ba-dark;
+    color: $ba-white;
+}
+
+Button.-primary {
+    @extend .ba-medium-base;
+    border-radius: 25;
+    color: $ba-white;
+    background-color: $ba-light;
+    font-size: $button-font-size;
+    height: $button-height;
+    android-elevation: 0;
+    // android-dynamic-elevation-offset: 0;
+}
+
+Button.-primary:disabled {
+    opacity: 0.9;
+    border-color: $ba-disabled-light;
+    color: $ba-disabled-font;
+    // background-color: $ba-white;
+}
+
+Button.-primary-icon {
+    border-radius: 25;
+    color: $ba-white;
+    background-color: $ba-light;
+    font-size: $button-font-size;
+    font-weight: 500;
+    height: $button-height;
+    android-elevation: 0;
+    // android-dynamic-elevation-offset: 0;
+}
+
+Button.-primary-icon:disabled {
+    opacity: 0.9;
+    border-color: $ba-disabled-light;
+    color: $ba-disabled-font;
+    // background-color: $ba-white;
+}
+
+Button.-secondary {
+    @extend .ba-font-base;
+    border-radius: 25;
+    color: $ba-white;
+    background-color: $ba-dark;
+    font-size: $button-font-size;
+    height: $button-height;
+    android-elevation: 0;
+}
+
+Button.-secondary:disabled {
+    opacity: 1;
+    border-color: $ba-disabled-light;
+    color: $ba-disabled-font-secondary;
+}
+
+Button.-delete {
+    @extend .ba-font-base;
+    border-radius: 25;
+    border-width: 1;
+    border-color: $ba-delete-button-border;
+    color: $ba-delete-button;
+    background-color: $ba-white;
+    font-size: $button-font-size-small;
+    height: $button-height;
+    android-elevation: 0;
+}
+
+Button.-neutral {
+    @extend .ba-font-base;
+    border-radius: 25;
+    border-width: 1;
+    border-color: $ba-neutral-button-border;
+    color: $ba-neutral-button;
+    background-color: $ba-white;
+    font-size: $button-font-size-small;
+    height: $button-height;
+    android-elevation: 0;
+}
+
+Button.-positive {
+    @extend .ba-font-base;
+    border-radius: 25;
+    border-width: 1;
+    border-color: $ba-positive;
+    color: $ba-white;
+    background-color: $ba-positive;
+    font-size: $button-font-size;
+    height: $button-height;
+    android-elevation: 0;
+}
+
+Button.-positive:disabled {
+    opacity: 0.9;
+    border-color: $ba-disabled-light;
+    color: $ba-disabled-font;
+    background-color: $ba-white;
+}
+
+Button.-label {
+    @extend .ba-medium;
+    border-width: 0;
+    color: $ba-dark;
+    background-color: $ba-white;
+    font-size: $button-font-size;
+    height: $button-height;
+    android-elevation: 0;
+}
+
+Button.-action-menu {
+    @extend .ba-font-base;
+    border-width: 0;
+    border-color: $ba-positive;
+    color: $ba-dark;
+    background-color: $ba-white;
+    font-size: $button-font-size;
+    height: $button-height;
+    android-elevation: 0;
+}
+
+Label.-positive {
+    @extend .ba-font-base;
+    border-radius: 25;
+    border-width: 1;
+    border-color: $ba-positive;
+    color: $ba-positive;
+    background-color: $ba-white;
+    font-size: $button-font-size;
+    font-weight: 500;
+    height: $button-height;
+}
+
+Label.-positive:disabled {
+    opacity: 0.9;
+    border-color: $ba-disabled-light;
+    color: $ba-disabled-font;
+    background-color: $ba-white;
+}
+
+.menu-button {
+    color: $ba-black;
+    background-color: $ba-white;
+}
+
+.menu-button-container {
+    @extend .ba-font-base;
+    border-radius: 25;
+    border-width: 1;
+    border-color: $ba-blue;
+    color: $ba-black;
+    background-color: $ba-white;
+    font-size: $button-font-size;
+    font-weight: 500;
+    height: $button-height;
+}
+
+.center {
+    vertical-align: center;
+    horizontal-align: center;
+}
+.vcenter {
+    vertical-align: center;
+}
+
+.hr-label {
+    height: 1;
+    width: 100%;
+    background-color: $ba-light-bg;
+}
+
+.hr-label-strong {
+    height: 1;
+    width: 100%;
+    background-color: $ba-black
+}
+
+.hr-label-purple {
+    height: 1;
+    width: 100%;
+    background-color: $ba-light-purple;
+}
+
+.light-busy-spinner {
+    color: $ba-light-purple;
+}
+
+.list-view {
+    background-color: $ba-white;
+    border-bottom-width: 1;
+    border-color: $ba-light-purple;
+}
+
+.right {
+    horizontal-align: right;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+.product-thumbnail {
+    vertical-align: center;
+    height: 48;
+    width: 48;
+}
+
+.itemview {
+    background-color: $ba_white;
+    vertical-align: center;
+}
+
+.list-item {
+    padding: 10 0 10 0;
+    margin-left: 10;
+    margin-right: 10;
+}
+
+.qty-icon {
+    @extend .fas;
+    font-size: 32;
+}
+.angle-icon {
+    @extend .fas;
+    font-size: 28;
+    vertical-align: center;
+}
+
+.marketing-tile {
+    background-color: $ba-white;
+}
+
+TextField {
+    @extend .ba-font-base;
+    width: 100%;
+    // height: 50;
+    font-size: 18;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10 10 10 10;
+    border-color: $ba-light;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 1;
+    color: $ba-dark;
+    placeholder-color: $ba-light-purple;
+}
+
+TextField.input-with-icon {
+    padding-left: 50;
+    // border-bottom-width: 5;
+}
+
+TextField:invalid,
+TextField.ng-invalid {
+    border-bottom-width: 1;
+    // border-color: $ba-light-purple;
+    // width: 100%;
+    // padding: 10 10 10 10;
+}
+
+TextView {
+    @extend .ba-font-base;
+    font-size: 18;
+    color: $ba-dark;
+}
+
+SearchBar {
+    @extend .ba-font-base;
+    font-size: 18;
+    color: $ba-dark; 
+}
+
+Switch {
+    @extend .ba-font-base;
+}
+
+/*
+MDTabStripItem:active Image {
+    color: $ba-dark;
+    background-color: $ba-dark;
+}
+MDTabStripItem Image {
+    color: $ba-disabled-font;
+    background-color: $ba-dark;
+}
+*/
+
+MDTabStripItem {
+    @extend .ba-font-base;
+    font-size: $bottom-navigation-item-font-size;
+    background-color: $ba-white;
+    // background: $ba-light-bg;
+}
+
+MDTabStrip {
+    @extend .ba-font-base;
+    font-size: $bottom-navigation-item-font-size;
+    background: $ba-dark;
+    color: $ba-disabled-font;
+    highlight-color: $ba-dark;
+    selected-item-color: $ba-light;
+    un-selected-item-color: $ba-disabled-font;
+}
+
+.ba-background {
+    background-color: $ba-dark;
+}
+
+.ba-background-light {
+    background-color: $ba-white;
+}
+  
+.input-icon {
+    color: $ba-dark;
+    font-size: 22;
+    // padding: 15 15 15 0;
+    margin-bottom: 15;
+    z-index: 1;
+}
+
+.icon-error {
+    color: $ba-red;
+}
+
+.checkbox-container {
+    color: $ba-light;
+    font-weight: bold;
+    font-size: 18;
+}
+
+.checkbox-icon {
+    color: $ba-light;
+    font-size: 23;
+    vertical-align: top;
+    text-align: left;
+}
+
+.checkbox-container-disabled {
+    color: rgb(161, 161, 161);
+    .checkbox-label {
+        color: rgb(161, 161, 161);
+    }
+}
+
+.page-description {
+    @extend .ba-font-base;
+    font-size: 18;
+    // letter-spacing: 0.1;
+    color: $ba-dark;
+    line-height: 1.2;
+}
+
+.page-icon-big {
+    font-size: 40;
+    color: $ba-light;
+    text-align: center;
+}
+
+.action-bar-icon {
+    width: 30;
+    height: 30;
+}
+
+.product-list-item {
+    margin-top: 10;
+    margin-bottom: 10;
+    font-size: 15;
+    color: $ba-text-color-main;
+}
+
+.product-list-item-even {
+    font-size: 14;
+    color: $ba-text-color-main;
+    background-color: $ba-light-bg;
+    padding: 5;
+}
+
+.product-list-item-odd {
+    font-size: 14;
+    color: $ba-text-color-main;
+    background-color: $ba-light-bg-alt;
+    padding: 5;
+}
+
+.clerk-header {
+    @extend .ba-font-base;
+    border-radius: 0 0 25 25;
+    background-color: $ba-dark;
+    color: $ba-white;
+    font-size: $common-header-font-size;
+}
+
+.header-container {
+    @extend .ba-font-base;
+    background-color: rgb(248, 248, 248);
+}
+
+.nt-segmented-bar {
+    @extend .ba-font-base;
+    selected-background-color: $ba-light-purple;
+    // selected-color: $ba-light-purple;
+    background-color: $ba-white;
+    // color: $ba-dark;
+    font-size: 14;
+    border-radius: 25 25 25 25;
+}
+
+// Fonts
+// - see font families in platform specific files
+.ba-h1 {
+    @extend .ba-font;
+    font-size: 27;
+}
+
+.ba-h2 {
+    @extend .ba-font;
+    font-size: 22;
+}
+
+.ba-h2-bold {
+    @extend .ba-bold-base;
+    font-size: 22;
+    color: $ba-text-color-main;
+}
+
+.ba-h2-bold-white {
+    @extend .ba-bold-base;
+    font-size: 22;
+    color: $ba-white;
+}
+
+.ba-h2-bold-purple {
+    @extend .ba-bold-base;
+    font-size: 22;
+    color: $ba-light;
+}
+
+.ba-h3 {
+    @extend .ba-font-base;
+    font-size: 16;
+    font-weight: 400;
+    color: $ba-text-color-main;
+}
+
+.ba-h3-bold {
+    @extend .ba-bold-base;
+    font-size: 16;
+    color: $ba-text-color-main;
+}
+
+.ba-h3-bold-black { 
+    @extend .ba-bold-base;
+    font-size: 16;
+    color: $ba-black;
+}
+
+.ba-h3-bold-white { 
+    @extend .ba-bold-base;
+    font-size: 16;
+    color: $ba-white;
+}
+
+.ba-h3-black { 
+    @extend .ba-font-base;
+    font-weight: 400;
+    font-size: 16;
+    color: $ba-black;
+}
+
+.ba-h3-white { 
+    @extend .ba-font-base;
+    font-weight: 400;
+    font-size: 16;
+    color: $ba-white;
+}
+
+.ba-h4 {
+    @extend .ba-font;
+    font-size: 12;
+    font-weight: 300;
+}
+
+.ba-h4-black { 
+    @extend .ba-font-base;
+    font-weight: 400;
+    font-size: 12;
+    color: $ba-black;
+}
+
+.ba-h4-white { 
+    @extend .ba-font-base;
+    font-weight: 400;
+    font-size: 12;
+    color: $ba-white;
+}
+
+.ba-h4-medium {
+    @extend .ba-medium-base;
+    font-size: 12;
+    color: $ba-text-color-main;
+}
+
+.ba-h4-medium-black { 
+    @extend .ba-medium-base;
+    font-size: 12;
+    color: $ba-black;
+}
+
+.ba-h4-bold {
+    @extend .ba-bold-base;
+    font-size: 12;
+    color: $ba-text-color-main;
+}
+
+.ba-h4-bold-black { 
+    @extend .ba-bold-base;
+    font-size: 12;
+    color: $ba-black;
+}
+
+.thin {
+    @extend .ba-font;
+    font-weight: 300;
+}
+
+.thin-italic {
+    @extend .thin;
+    font-style: italic;
+}
+
+.normal {
+    @extend .ba-font;
+    font-weight: 400;
+}
+
+.semi-bold {
+    @extend .ba-font;
+    font-weight: 500;
+}
+
+.bold {
+    @extend .ba-font;
+    font-weight: 600;
+    &-italic {
+        @extend .bold;
+        font-style: italic;
+    }
+}
+
+.black {
+    @extend .ba-font;
+    font-weight: 900;
+}
+
+.error-text {
+    @extend .ba-medium-base;
+    color: rgb(227,6,19);
+    font-size: 12;
+}
+
+.warning-text {
+    @extend .ba-medium-base;
+    color: rgb(150, 108, 0);
+    font-size: 12;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.scan-icon {
+    @extend .fas;
+    font-size: 36;
+}
+
+.cart-add-icon {
+    @extend .fas;
+    font-size: 28;
+    color: $ba-white;
+    vertical-align: middle;
+}
+
+.cart-qty-icon {
+    @extend .fas;
+    font-size: 20;
+    color: $ba-icon-grey;
+}
+
+.return-cart-qty-icon {
+    @extend .fas;
+    font-size: 20;
+    color: $ba-icon-grey;
+}
+
+.details-icon {
+    @extend .fas;
+    font-size: 36;
+}
+
+.notification-icon {
+    @extend .fas;
+    font-size: 24;
+}
+
+.status-text {
+    @extend .ba-font;
+    font-size: 12;
+}
+
+.status-medium {
+    @extend .ba-font;
+    font-size: 14;
+}
+
+.info-label-dark {
+    font-size: 20;
+    color: $ba-blue;
+}
+  
+.attention-banner {
+    @extend .ba-bold-base;
+    border-radius: 25 25 0 0;
+    background-color: $ba-light-bg;
+    font-size: 16;
+    color: $ba-blue;
+}
+
+.bottom-sheet {
+    font-size: 20;
+    border-radius: 25 25 0 0;
+    background-color: $ba-white;
+}
+
+.cart-header {
+    @extend .ba-bold-base;
+    border-radius: 0 0 25 25;
+    background-color: $ba-light-bg;
+    font-size: $common-header-font-size;
+    color: $ba-blue;
+    padding: 0 20;
+    border-width: 0;
+}
+
+.cart-container {
+    border-radius: 0 0 25 25;
+    border-width: 0;
+    background-color: $ba-white;
+}
+
+.common-page-header {
+    @extend .ba-font-base;
+    font-size: $common-header-font-size;
+    background-color: $ba-dark;
+    color: $ba-white;
+    padding: 10 10 10 10;
+    border-radius: 0 0 25 25;
+}
+
+.slide-button {
+    background-color: $ba-positive;
+    border-width: 1 1 1 1;
+    color: $ba-white;
+}
+
+.checkout-page {
+    background-color: $ba-light-bg;
+    padding: 0;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 28;
+    height: 28;
+    padding: 0 0 0 0;
+    background: #fff;
+    border-width: 2;
+    border-color: $ba-dark;
+    color: $ba-dark;
+    text-align: center;
+}
+/*
+    Background Colors
+*/
+.bg-accent-primary {
+	background-color: #63b0f5;
+}
+
+.bg-accent-secondary {
+	background-color: #c0defa;
+}
+
+.bg-accent-tertiary {
+	background-color: #dbecfc;
+}

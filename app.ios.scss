@@ -1,0 +1,234 @@
+// Import app variables
+@import 'app-variables';
+
+// Import the theme’s main ruleset - both index and platform specific.
+@import '~@nativescript/theme/core';
+
+// Import common styles
+@import 'app-common';
+
+// Place any CSS rules you want to apply only on iOS here
+
+.grayout {
+    opacity: 0.6;
+    color: $disabled;
+}
+
+.fa-icon {
+    @extend .fas;
+    font-size: 20;
+}
+
+.switch-style {
+    color: lightgray;
+    background-color: $ba-red;
+ }
+
+.ba-upper-alt {
+    font-family: Geneva, Helvetica, Arial, 'sans-serif';
+}
+
+.checkbox-icon-empty {
+    font-size: 20;
+    background-color: transparent;
+}
+
+.fas.checkbox-icon {
+    font-size: 20;
+}
+
+ActionBar {
+    font-size: 20;
+}
+
+.action-bar-icon {
+    width: 30;
+    height: 30;
+}
+
+.action-bar-icon-right {
+    width: 30;
+    height: 30;
+}
+
+
+// Font icon class
+.fab {
+    font-family: 'Font Awesome 5 Brands', 'fa-brands-400';
+    font-weight: 400;
+    font-style: normal;
+}
+/* 
+    File name: fa-regular-400.ttf 
+    Font name: Font Awesome 5 Free
+*/
+.far {
+    font-family: 'Font Awesome 5 Free', 'fa-regular-400';
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* 
+    File name: fa-solid-900.ttf 
+    Font name: Font Awesome 5 Free
+*/
+.fas {
+    font-family: 'Font Awesome 5 Free', 'fa-solid-900';
+    font-weight: 900;
+    font-style: normal;
+}
+
+// Material icons
+.m-icon {
+    font-family: 'Material Icons', 'MaterialIcons-Regular';
+    font-weight: 400;
+    // font-style: revert;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-outline {
+    font-family: 'Material Icons Outlined', 'MaterialIconsOutlined-Regular';
+    font-weight: 400;
+    // font-style: revert;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-bottom-navigation {
+    font-family: 'Material Icons Outlined', 'MaterialIconsOutlined-Regular';
+    font-weight: 400;
+    height: 40;
+    // font-style: revert;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-round {
+    font-family: 'Material Icons Round', 'MaterialIconsRound-Regular';
+    font-weight: 400;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-sharp {
+    font-family: 'Material Icons Sharp', 'MaterialIconsSharp-Regular';
+    font-weight: 400;
+    font-size: $ba-icon-size;
+}
+
+.m-icon-two-tone {
+    font-family: 'Material Icons Two Tone', 'MaterialIconsTwoTone-Regular';
+    font-weight: 400;
+    font-size: $ba-icon-size;
+}
+
+// BA
+/**
+│ Satoshi-Black.otf                 │ font-family: "Satoshi", "Satoshi-Black"; font-weight: 900;                                 │
+│ Satoshi-BlackItalic.otf           │ font-family: "Satoshi", "Satoshi-BlackItalic"; font-weight: 900;                           │
+│ Satoshi-Bold.otf                  │ font-family: "Satoshi", "Satoshi-Bold"; font-weight: 700;                                  │
+│ Satoshi-BoldItalic.otf            │ font-family: "Satoshi", "Satoshi-BoldItalic"; font-weight: 700;                            │
+│ Satoshi-Italic.otf                │ font-family: "Satoshi", "Satoshi-Italic"; font-weight: 400;                                │
+│ Satoshi-Light.otf                 │ font-family: "Satoshi", "Satoshi-Light"; font-weight: 300;                                 │
+│ Satoshi-LightItalic.otf           │ font-family: "Satoshi", "Satoshi-LightItalic"; font-weight: 300;                           │
+│ Satoshi-Medium.otf                │ font-family: "Satoshi", "Satoshi-Medium"; font-weight: 500;                                │
+│ Satoshi-MediumItalic.otf          │ font-family: "Satoshi", "Satoshi-MediumItalic"; font-weight: 500;                          │
+│ Satoshi-Regular.otf               │ font-family: "Satoshi", "Satoshi-Regular"; font-weight: 400;                               │
+│ Satoshi-Regular.ttf               │ font-family: "Satoshi", "Satoshi-Regular"; font-weight: 400; 
+*/
+
+.ba-font-base {
+    font-family: 'Satoshi', 'Satoshi-Regular';
+    font-weight: 400;
+}
+
+.ba-base {
+    @extend .ba-font-base;
+}
+
+.ba-font {
+    @extend .ba-font-base;
+    color: $ba-blue;
+}
+
+.ba-font-white {
+    @extend .ba-font-base;
+    color: white;
+    font-size: $ba-font-size;
+}
+
+.ba-medium-base {
+    font-family: 'Satoshi', 'Satoshi-Medium';
+    font-weight: 500;
+}
+
+.ba-medium {
+    @extend .ba-medium-base;
+    color: $ba-blue;
+}
+
+.ba-light-base {
+    font-family: 'Satoshi', 'Satoshi-Light';
+    font-weight: 300;
+}
+
+.ba-light {
+    @extend .ba-light-base;
+    color: $ba-blue;
+}
+
+.ba-bold-base {
+    font-family: 'Satoshi', 'Satoshi-Bold';
+    font-weight: 700;
+}
+
+.ba-bold {
+    @extend .ba-bold-base;
+    color: $ba-blue;
+}
+
+.ba-header {
+    @extend .ba-medium-base;
+    font-size: $ba-font-size-small;
+    color: $ba-blue;
+}
+
+.ba-header-medium {
+    @extend .ba-medium-base;
+    font-size: $ba-font-size-smaller;
+    color: $ba-blue;
+}
+
+.ba-italic-base {
+    font-family: 'Satoshi', 'Satoshi-Bold';
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ba-italic {
+    @extend .ba-italic-base;
+    color: $ba-blue;
+}
+
+.ba-description {
+    @extend .ba-font-base;
+    color: $ba-text-color-main;
+}
+
+.cart-header-ios {
+    font-size: 15;
+    color: $ba-white;
+}
+
+.nt-segmented-bar {
+    @extend .ba-font-base;
+    selected-background-color: $ba-light-purple;
+    // selected-background-color: $ba-light-purple;
+    // background-color: #FEF2E7; // iOS dims the background color when disabled and we compensate for that here
+    // https://rdovhaliuk.medium.com/ios-13-uisegmentedcontrol-3-important-changes-d3a94fdd6763
+    background-color: $ba-white;
+    font-size: 18;
+    border-radius: 25 25 25 25;
+}
+
+UIMenuElement {
+    font-size: 18;
+    color: $ba-blue;
+}
