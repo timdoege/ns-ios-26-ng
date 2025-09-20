@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA, Injectable, ErrorHandler, APP_INITIALIZER, 
 
 import { AppComponent } from './app.component';
 import { Trace } from '@nativescript/core';
-import { NativeDialogService, registerElement } from '@nativescript/angular';
+import { NativeDialogService, NativeScriptCommonModule, NativeScriptModule, NativeScriptRouterModule, registerElement } from '@nativescript/angular';
 import { ModalStack, overrideModalViewMethod } from 'nativescript-windowed-modal';
 import { PreloadingStrategy } from '@angular/router';
 import { ImageCacheItModule } from '@triniwiz/nativescript-image-cache-it/angular';
@@ -56,6 +56,9 @@ export class SentryErrorHandler implements ErrorHandler {
         AppComponent
     ],
     imports: [
+        NativeScriptCommonModule,
+        NativeScriptModule,
+        NativeScriptRouterModule,
         ImageCacheItModule,
     ],
     providers: [
